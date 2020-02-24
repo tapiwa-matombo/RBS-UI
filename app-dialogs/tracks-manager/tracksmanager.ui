@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TracksManager</class>
+ <widget class="QWidget" name="TracksManager">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>742</width>
+    <height>628</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="5" column="4">
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="text">
+      <string>Change</string>
+     </property>
+    </widget>
+   </item>
+   <item row="17" column="4">
+    <widget class="QPushButton" name="pushButton_11">
+     <property name="text">
+      <string>Change</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="6">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label_16">
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>TRACKS MANAGER</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="9" column="4">
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="text">
+      <string>Change</string>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="0" colspan="4">
+    <widget class="QComboBox" name="comboBox_6">
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="minimumContentsLength">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="23" column="0" colspan="3">
+    <widget class="QLabel" name="label_12">
+     <property name="text">
+      <string>End level threshold</string>
+     </property>
+    </widget>
+   </item>
+   <item row="23" column="4">
+    <widget class="QLabel" name="label_15">
+     <property name="text">
+      <string>db</string>
+     </property>
+    </widget>
+   </item>
+   <item row="19" column="4">
+    <widget class="QPushButton" name="pushButton_9">
+     <property name="text">
+      <string>Change</string>
+     </property>
+    </widget>
+   </item>
+   <item row="22" column="4">
+    <widget class="QLabel" name="label_14">
+     <property name="text">
+      <string>db</string>
+     </property>
+    </widget>
+   </item>
+   <item row="21" column="0" colspan="3">
+    <widget class="QLabel" name="label_10">
+     <property name="text">
+      <string>Start level threshold</string>
+     </property>
+    </widget>
+   </item>
+   <item row="24" column="0">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Play</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0" colspan="2">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>MOOD</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="4">
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="text">
+      <string>Change</string>
+     </property>
+    </widget>
+   </item>
+   <item row="20" column="0" colspan="2">
+    <widget class="QLabel" name="label_9">
+     <property name="text">
+      <string>Analyze Tracks</string>
+     </property>
+    </widget>
+   </item>
+   <item row="22" column="0" colspan="3">
+    <widget class="QLabel" name="label_11">
+     <property name="text">
+      <string>Next Track Start Threshold</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="4">
+    <widget class="QComboBox" name="comboBox_2">
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="minimumContentsLength">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" rowspan="2" colspan="7">
+    <widget class="QLineEdit" name="lineEdit_2"/>
+   </item>
+   <item row="16" column="0" colspan="2">
+    <widget class="QLabel" name="label_8">
+     <property name="text">
+      <string>LANGUAGE</string>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="0" colspan="4">
+    <widget class="QComboBox" name="comboBox_9">
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="minimumContentsLength">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="18" column="0" colspan="2">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>RATING</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0" colspan="4">
+    <widget class="QComboBox" name="comboBox_5">
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="minimumContentsLength">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="4">
+    <widget class="QPushButton" name="pushButton_10">
+     <property name="text">
+      <string>Change</string>
+     </property>
+    </widget>
+   </item>
+   <item row="17" column="0" colspan="4">
+    <widget class="QComboBox" name="comboBox_10">
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="minimumContentsLength">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0" colspan="4">
+    <widget class="QComboBox" name="comboBox_7">
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="minimumContentsLength">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="7" rowspan="2" colspan="2">
+    <widget class="QComboBox" name="comboBox">
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="minimumContentsLength">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="4">
+    <widget class="QPushButton" name="pushButton_12">
+     <property name="text">
+      <string>Change</string>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="0" colspan="2">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>GENDER</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="4">
+    <widget class="QComboBox" name="comboBox_4">
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="minimumContentsLength">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0" colspan="2">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>FILE TYPES</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="4">
+    <widget class="QPushButton" name="pushButton_8">
+     <property name="text">
+      <string>Change</string>
+     </property>
+    </widget>
+   </item>
+   <item row="21" column="4">
+    <widget class="QLabel" name="label_13">
+     <property name="text">
+      <string>db</string>
+     </property>
+    </widget>
+   </item>
+   <item row="22" column="3">
+    <widget class="QSpinBox" name="spinBox_2"/>
+   </item>
+   <item row="19" column="0" colspan="4">
+    <widget class="QComboBox" name="comboBox_8">
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="minimumContentsLength">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="4">
+    <widget class="QComboBox" name="comboBox_3">
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="minimumContentsLength">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="21" column="3">
+    <widget class="QSpinBox" name="spinBox"/>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>GENRES</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0" colspan="3">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>CHANGE TRACK STATE</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Change Category</string>
+     </property>
+    </widget>
+   </item>
+   <item row="23" column="3">
+    <widget class="QSpinBox" name="spinBox_3"/>
+   </item>
+   <item row="21" column="7">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Import File</string>
+     </property>
+    </widget>
+   </item>
+   <item row="21" column="8">
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="text">
+      <string>Import Folder</string>
+     </property>
+    </widget>
+   </item>
+   <item row="21" column="9">
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="text">
+      <string>Categories</string>
+     </property>
+    </widget>
+   </item>
+   <item row="21" column="6">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>259</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="24" column="7">
+    <widget class="QPushButton" name="pushButton_13">
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+   </item>
+   <item row="24" column="8">
+    <widget class="QPushButton" name="pushButton_14">
+     <property name="text">
+      <string>End</string>
+     </property>
+    </widget>
+   </item>
+   <item row="24" column="9">
+    <widget class="QPushButton" name="pushButton_15">
+     <property name="text">
+      <string>Close</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="6" rowspan="17" colspan="6">
+    <widget class="QTableView" name="tableView"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
