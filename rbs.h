@@ -120,6 +120,8 @@ private slots:
 
     void on_btnUsersManager_clicked();
 
+    void on_tableWidgetQ_itemClicked(QTableWidgetItem *item);
+
 private:
     Ui::rbs *ui;
     AudioInputManager *audioinputmanager = new AudioInputManager();
@@ -148,7 +150,7 @@ private:
     QAudioFormat format;
     QList<QAudioDeviceInfo> inputDevices;
     QList<QAudioDeviceInfo> outputDevices;
-    QAudioInput* audio = new QAudioInput(format, this);
+    QAudioInput *audio = new QAudioInput(format, this);
 };
 
 #endif // RBS_H

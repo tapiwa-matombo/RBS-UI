@@ -31,6 +31,7 @@ QSqlError DBA::initDb()
     }
     else
     {
+        QString q = "" ;
         qDebug() << "Database connected successfully";
         isActive = true;
         qDebug() << "Result of createMetaDataTable";
@@ -41,6 +42,23 @@ QSqlError DBA::initDb()
         qDebug() << db.tables().count();
     }
     return QSqlError();
+}
+
+//Get data from db
+bool DBA::getResult(QString &q)
+{
+    QString stmt = "SELECT * FROM categories";
+    q = stmt;
+    QSqlQuery query;
+    query.exec(q);
+    QVariant v = query.result()->handle();
+    if (v.isValid() && qstrcmp(v.typeName(), "sqlite3_stmt*") == 0)
+    {
+        //v.data() returns a pointer to the handle
+//        sqlite3_stmt *handle = *static_cast<sqlite3_stmt **>(v.data());
+    }
+    qDebug() << v;
+    return false;
 }
 
 // Query database

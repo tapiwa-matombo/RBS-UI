@@ -97,3 +97,4 @@ RESOURCES += \
 DISTFILES += \
     albumdetails.xml \
 
+RC_ICONS = Excel.ico

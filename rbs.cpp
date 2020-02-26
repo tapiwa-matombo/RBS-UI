@@ -206,14 +206,73 @@ void rbs::setBroadcastPlayerMedia()
     QDir dir(directory);
     QStringList files = dir.entryList(QStringList() << "*.mp3",QDir::Files);
     QList<QMediaContent> content;
+    int row = 0;
+    qDebug() << "Number of files";
+    qDebug() << files.count();
+
+    // Set up table appearance
+    ui->tableWidgetQ->setShowGrid(false);
+    // Set column count
+    ui->tableWidgetQ->setColumnCount(5);
+    ui->tableWidgetQ->setColumnWidth(1, 40);
+    ui->tableWidgetQ->setColumnWidth(2, 40);
+    ui->tableWidgetQ->setColumnWidth(3, 40);
+    ui->tableWidgetQ->setColumnWidth(4, 40);
+    ui->tableWidgetQ->setColumnWidth(5, 40);
+    ui->tableWidgetQ->horizontalHeader()->hide();
+
+    // Size each column accordingly
+    qDebug() << "Number of columns in table";
+    qDebug() << ui->tableWidgetQ->columnCount();
+    ui->tableWidgetQ->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
+    // Set rowcount
+    ui->tableWidgetQ->setRowCount(files.count());
     for(const QString& f:files)
     {
         content.push_back(QUrl::fromLocalFile(dir.path()+"/" + f));
         QFileInfo fi(f);
-        ui->listWidgetQ->addItem(fi.fileName());
+
+        QTableWidgetItem *item = new QTableWidgetItem();
+        item->setText(fi.fileName());
+        ui->tableWidgetQ->setItem(row,0, item);
+
+        QTableWidgetItem *play = new QTableWidgetItem();
+        play->setIcon(QIcon(":/ui/icons/play-buttonw.png"));
+        ui->tableWidgetQ->setItem(row, 1, play);
+
+        QTableWidgetItem *phones = new QTableWidgetItem();
+        phones->setIcon(QIcon(":/ui/icons/headphonesw.png"));
+        ui->tableWidgetQ->setItem(row, 2, phones);
+
+        QTableWidgetItem *toPlayer = new QTableWidgetItem();
+        toPlayer->setIcon(QIcon(":/ui/icons/add-trackw.png"));
+        ui->tableWidgetQ->setItem(row, 3, toPlayer);
+
+        QTableWidgetItem *remove = new QTableWidgetItem();
+        remove->setIcon(QIcon(":/ui/icons/remove-trackw.png"));
+        ui->tableWidgetQ->setItem(row, 4, remove);
+
+        QTableWidgetItem *info = new QTableWidgetItem();
+        info->setIcon(QIcon(":/ui/icons/infow.png"));
+        ui->tableWidgetQ->setItem(row, 5, info);
+
+        qDebug() << "Adding items to table";
+
+        qDebug() << item->text();
+
+        qDebug() << play->icon();
+
+        qDebug() << phones->icon();
+
+        qDebug() << toPlayer->icon();
+
+        qDebug() << remove->icon();
+
+        qDebug() << info->icon();
+        row += 1;
     }
     bplaylist->addMedia(content);
-    ui->listWidgetQ->setCurrentRow(bplaylist->currentIndex() != -1? bplaylist->currentIndex():0);
+    //ui->tableWidgetQ->setCurrentRow(bplaylist->currentIndex() != -1? bplaylist->currentIndex():0);
 }
 
 void rbs::getMetaData()
@@ -364,6 +423,7 @@ void rbs::on_btnBroadcastManager_clicked()
 //To pass device source
 void rbs::setupFormat()
 {
+    qDebug() << "Setting the formart for recording";
     format.setSampleRate(8000);
     format.setChannelCount(1);
     format.setSampleSize(8);
@@ -384,7 +444,7 @@ void rbs::startRecording()
 {
     // setup recording process here
     QFile destinationFile;
-    destinationFile.setFileName("/recordings/test.raw");
+    destinationFile.setFileName("./recordings/test.raw");
     destinationFile.open(QIODevice::WriteOnly| QIODevice::Truncate);
 
     //Set up desired format
@@ -403,6 +463,7 @@ void rbs::stopRecording(QAudioInput* audio)
 
 void rbs::handleStateChanged(QAudio::State newState)
 {
+    qDebug() << newState;
     switch (newState) {
             case QAudio::StoppedState:
                 if (audio->error() != QAudio::NoError) {
@@ -502,4 +563,11 @@ bool rbs::getAudioOutputsConnected()
 void rbs::on_btnUsersManager_clicked()
 {
 
+}
+
+
+void rbs::on_tableWidgetQ_itemClicked(QTableWidgetItem *item)
+{
+
+    qDebug() << item->text();
 }

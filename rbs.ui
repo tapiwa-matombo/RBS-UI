@@ -2469,7 +2469,7 @@ border-color: rgb(238, 238, 238);</string>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
-           <widget class="QListWidget" name="listWidgetQ"/>
+           <widget class="QTableWidget" name="tableWidgetQ"/>
           </item>
          </layout>
         </widget>
@@ -2880,7 +2880,7 @@ border-color: rgb(238, 238, 238);</string>
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="toolTip">
-             <string>Play track on deck.</string>
+             <string>Listen in headphones</string>
             </property>
             <property name="text">
              <string/>
@@ -2925,7 +2925,7 @@ border-color: rgb(238, 238, 238);</string>
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="toolTip">
-             <string>Play track on deck.</string>
+             <string>Play in broadcast player (instant)</string>
             </property>
             <property name="text">
              <string/>

@@ -23,6 +23,7 @@ class DBA: public QObject
         bool insert(QString &q);
         bool remove(QString &q);
         bool update(QString &q);
+        bool getResult(QString &q);
 
     private slots:
         QList<QString> tables();

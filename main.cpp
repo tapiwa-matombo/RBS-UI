@@ -62,6 +62,8 @@ int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
 
+    app.windowIcon();
+
     if (!associateFileTypes())
         return -1;
 
